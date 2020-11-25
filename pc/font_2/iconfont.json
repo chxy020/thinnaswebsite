@@ -1,0 +1,51 @@
+{
+  "id": "1844111",
+  "name": "thinnas",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "14943320",
+      "name": "分享",
+      "font_class": "share",
+      "unicode": "e657",
+      "unicode_decimal": 58967
+    },
+    {
+      "icon_id": "1969472",
+      "name": "人员利用率",
+      "font_class": "rate",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "2486600",
+      "name": "时间同步",
+      "font_class": "tongbu",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "6233075",
+      "name": "AVI图标",
+      "font_class": "avi",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "14473425",
+      "name": "文档",
+      "font_class": "file",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "14732645",
+      "name": "人脸识别",
+      "font_class": "shibie",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    }
+  ]
+}
