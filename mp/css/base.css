@@ -116,7 +116,7 @@ body {background:#ffffff;}
 .arrR {text-decoration:none;font-size:0.3rem;font-weight:normal;padding-left:0.08rem;}
 .indexpart2{
 	height: 9.22rem;
-	background:#ff1100 url(../images/indexpart2.jpg) no-repeat center;background-size:7.5rem 9.22rem;
+	background:#fff url(../images/indexpart2.jpg) no-repeat center;background-size:7.5rem 9.22rem;
 }
 .indexpart2 h2{
 	font-size: 0.5rem;
