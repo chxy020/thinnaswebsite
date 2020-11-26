@@ -13,6 +13,7 @@
 <meta name="author" content="ThinNAS">
 <meta name="author" content="私人存储服务器">
 <link rel="shortcut icon" href="images/favicon.ico" type="images/x-icon" />
+<script src="js/useragent.js"></script>
 </head>
 <body id="machome" class="bodySY">
 
@@ -48,11 +49,11 @@
                     <p>随时保存查看分享&nbsp;&nbsp;&nbsp;&nbsp;玩转NAS很简单</p>
                 </div>
                 <div>
-                    <img src="images/qrcode.jpg" class="download-qrcode">
+                    <img id="qrcode" src="images/qrcode.jpg" class="download-qrcode">
                 </div>
                 <div class="client-ico">
                     <span><i class="iconfont icon-anzhuo"></i>Android</span>
-                    <span class="a"><i class="iconfont icon-pingguo"></i>iOS</span>
+                    <span id="iosbtn" class="a"><i class="iconfont icon-pingguo"></i>iOS</span>
                 </div>
             </div>
         </div>
@@ -67,21 +68,22 @@
                     <p>数据同步管理&nbsp;&nbsp;&nbsp;&nbsp;多终端操作方便</p>
                 </div>
                 <div class="text-xx clearfix">
-                    <dl>
+                    <dl id="windownload">
                         <dt><a href="javascript:void(0)" class="download-btn"><i class="iconfont icon-windows"></i><span>Win下载</span></a></dt>
-                        <dd>最新版本：V1.5.0</dd>
-                        <dd>发布时间：2019.04.04</dd>
+                        <dd>最新版本：</dd>
+                        <dd>发布时间：</dd>
                         <dd>适用系统：Windows 7及以上</dd>
                     </dl>
                     <dl>
                         <dt><a href="javascript:void(0)" class="download-btn"><i class="iconfont icon-pingguo"></i><span>Mac下载</span></a></dt>
-                        <dd>最新版本：V1.5.0</dd>
-                        <dd>发布时间：2019.04.04</dd>
-                        <dd>适用系统：Mac OS X 10.10+</dd>
+                        <dd>最新版本：</dd>
+                        <dd>发布时间：</dd>
+                        <dd>适用系统：</dd>
                     </dl>
                 </div>
                 <div class="info">
-                    温馨提示：安装时若遇到拦截问题请 &nbsp;<a href="">查看此教程</a>
+                    <!-- 温馨提示：安装时若遇到拦截问题请 &nbsp;<a href="">查看此教程</a> -->
+                    温馨提示：苹果mac客户端正在开发中，敬请期待
                 </div>
             </div>
             <div class="img-wrapper2">
@@ -113,6 +115,7 @@
     </div>
     
     <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/config.js"></script>
     <script src="js/adaptive.js"></script>
     <script>
         $(".wechat").mouseover(function(){
@@ -120,7 +123,52 @@
         })
         $(".wechat").mouseout(function(){
             $(".qrcode-wrapper").hide()
-        })
+        });
+
+        $(function(){
+            $("#iosbtn").bind("click",function(){
+                alert("正在开发中，敬请期待");
+            });
+
+            $.ajax({
+                async: true,
+                type: "post",
+                url: Base.serverUrl+"/jqkj/tvApk/getQrcode",
+                data:{type:0},
+                dataType: "json",
+                success: function(obj) {
+                    if(obj.status == 0){
+                        $("#qrcode").attr("src",obj.data);
+                    }
+                },
+                //失败的回调函数
+                error: function() {
+                    console.log("error")
+                }
+            });
+            $.ajax({
+                async: true,
+                type: "get",
+                url: Base.serverUrl+"/jqkj/tvApk/getNowApp",
+                dataType: "json",
+                success: function(obj) {
+                    if(obj.status == 0){
+                        var data = obj.data[1] || {};
+                        var html = [];
+                        html.push('<dt><a href="'+data.path+'" class="download-btn"><i class="iconfont icon-windows"></i><span>Win下载</span></a></dt>');
+                        html.push('<dd>最新版本：V'+data.version+'</dd>');
+                        html.push('<dd>发布时间：'+data.updatetime+'</dd>');
+                        html.push('<dd>适用系统：Windows 7及以上</dd>');
+                        $("#windownload").html(html.join(''));
+                    }
+                    
+                },
+                //失败的回调函数
+                error: function() {
+                    console.log("error")
+                }
+            });
+        });
     </script>
 </body>
 </html>

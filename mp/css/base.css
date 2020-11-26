@@ -76,7 +76,7 @@ body {background:#ffffff;}
 .download-qrcode {width:3.4rem;height:3.4rem;margin-bottom:0.4rem;border:0.2rem solid #fff;margin-left:auto;margin-right:auto;}
 .client-ico {color:#edce94;margin-top:0.2rem;text-align:center;}
 .client-ico > span {font-size:0.30rem;line-height:1.5;font-weight:normal;}
-.client-ico > span.a {padding-left:0.8rem;}
+.client-ico > span.a {margin-left: 0.8rem;}
 .client-ico .iconfont {margin-right:0.2rem;}
 .text-wrapper2 {padding:0.3rem}
 .pc h2 {line-height:0.7rem;margin-bottom:0.4rem;padding-top:0.8em;font-size:0.7rem;font-weight:normal;color:#a32323;text-align:center;}

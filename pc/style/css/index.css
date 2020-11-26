@@ -633,8 +633,8 @@ dd {font-size:16px;color:#666;line-height:32px;}
 .mobile {margin-top:88px;}
 .pc {margin-top:260px;margin-bottom:260px;}
 .client-ico {color:#edce94;margin-top:20px;text-align:center;}
-.client-ico > span {font-size:18px;line-height:1.5;}
-.client-ico > span.a {padding-left:80px;}
+.client-ico > span {font-size:18px;line-height:1.5;cursor: pointer;}
+.client-ico > span.a {margin-left: 80px;}
 .fa-android,.fa-apple {font-size:26px;margin-right:10px;}
 .fa-android {position:relative;top:4px;}
 .download-qrcode {width:230px;height:230px;margin-bottom:24px;border:15px solid #fff;margin-right:20px;}

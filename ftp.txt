@@ -1,0 +1,15 @@
+官网优化
+蓝湖
+https://lanhuapp.com/url/G8Q0I-KVazf
+线上的源码 在这里下吗
+官网的外网地址：http://thinnas.com/
+ssh服务-登录Xmanager--Xshell 
+服务器ip:39.107.249.187
+用户命：root
+登录密码：Hzsj!1234
+官网文件路径：/opt/jq/www/thinnas
+thinnas目录里全部都是官网相关的文件
+
+
+静态文件上传地址：139.196.147.194:/opt/jq/www/m_thinnas
+密码：Hzsj!1234
