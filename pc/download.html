@@ -52,7 +52,7 @@
                     <img id="qrcode" src="images/qrcode.jpg" class="download-qrcode">
                 </div>
                 <div class="client-ico">
-                    <span><i class="iconfont icon-anzhuo"></i>Android</span>
+                    <span id="androidbtn"><i class="iconfont icon-anzhuo"></i>Android</span>
                     <span id="iosbtn" class="a"><i class="iconfont icon-pingguo"></i>iOS</span>
                 </div>
             </div>
@@ -126,9 +126,15 @@
         });
 
         $(function(){
+            var apkUrl = "";
             $("#iosbtn").bind("click",function(){
                 // alert("正在开发中，敬请期待");
                 $('.tishiPop').show().delay(3000).hide(0);
+            });
+            $("#androidbtn").bind("click",function(){
+                if(apkUrl){
+                    window.open(apkUrl, "_blank");
+                }
             });
 
             $.ajax({
@@ -161,6 +167,9 @@
                         html.push('<dd>发布时间：'+data.updatetime+'</dd>');
                         html.push('<dd>适用系统：Windows 7及以上</dd>');
                         $("#windownload").html(html.join(''));
+
+                        var android = obj.data[0] || {};
+                        apkUrl = android.path || "";
                     }
                     
                 },
