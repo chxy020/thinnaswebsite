@@ -113,7 +113,7 @@
           </div>
       </div>
     </div>
-    
+    <div class="tishiPop">正在开发中，敬请期待</div>
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/config.js"></script>
     <script src="js/adaptive.js"></script>
@@ -127,7 +127,8 @@
 
         $(function(){
             $("#iosbtn").bind("click",function(){
-                alert("正在开发中，敬请期待");
+                // alert("正在开发中，敬请期待");
+                $('.tishiPop').show().delay(3000).hide(0);
             });
 
             $.ajax({

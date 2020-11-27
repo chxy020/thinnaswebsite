@@ -913,7 +913,30 @@ html,body {width:768px;}
 
 
 
-
+.tishiPop{
+        background: #fff;
+        position: absolute;
+        position: fixed;
+        _position: absolute;
+        z-index: 999999999999;
+        width: 300px;
+        height: 50px;
+        line-height: 50px;
+        left: 50%;
+        top: 50%;
+        margin: -20px 0 0 -150px;
+        padding: 0;
+        -moz-border-radius: 5px;
+        -khtml-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        -moz-box-shadow: 0 0 30px #333;
+        -webkit-box-shadow: 0 0 30px #333;
+        box-shadow: 0 0 30px #333;
+        text-align: center;
+        color:#a52323;
+        display: none;
+    }
 
 
 
