@@ -273,4 +273,28 @@ body {background:#ffffff;}
 }
 .top_list li.curr{color:#a52323;
 }
+.tishiPop{
+        background: #fff;
+        position: absolute;
+        position: fixed;
+        _position: absolute;
+        z-index: 999999999999;
+        width: 4rem;
+        height: 0.8rem;
+        line-height: 0.8rem;
+        left: 50%;
+        top: 50%;
+        margin: -0.4rem 0 0 -2rem;
+        padding: 0;
+        -moz-border-radius: 0.05rem;
+        -khtml-border-radius: 0.05rem;
+        -webkit-border-radius: 0.05rem;
+        border-radius: 0.05rem;
+        -moz-box-shadow: 0 0 0.3rem #333;
+        -webkit-box-shadow: 0 0 0.3rem #333;
+	box-shadow: 0 0 0.3rem #333;
+        text-align: center;
+        color:#a52323;
+        display: none;
+    }
 
